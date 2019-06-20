@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { CreateProjectComponent } from './projects/create-project/create-project.component';
 import { ProjectBoardsComponent } from './projects/project-boards/project-boards.component';
+import { ProjectTasksComponent } from './projects/project-tasks/project-tasks.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import {SidebarModule} from "ng-sidebar";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     CreateProjectComponent,
-    ProjectBoardsComponent
+    ProjectBoardsComponent,
+    ProjectTasksComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SidebarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
