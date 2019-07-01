@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+.alert {
+  padding: 5px;
+  color: red;
+}
+
+body {
+  /* background-color:#838283; */
+  background: linear-gradient(70deg, #838283, black);
+}
+
+html,
+body {
+  min-height: 100vh;
+}

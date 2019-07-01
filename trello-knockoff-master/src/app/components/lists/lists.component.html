@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-content">
+    <a class="btn-floating btn-small waves-effect waves-light red right close" (click)="deleteListItem(listItem.item)"
+      [hidden]="hidden">
+      <i class="material-icons">close</i>
+    </a>
+    <!-- <button type="button" class="close pull-right" aria-label="Close" (click)="deleteListItem(listItem.item)" [hidden]="hidden">
+      <span aria-hidden="true">&times;</span>
+    </button> -->
+    <span class="card-title" (click)="toggle()">
+      {{ listItem.item | uppercase }}
+    </span>
+    <div [hidden]="hidden" (dragover)="onDragOver($event)" (drop)="onDrop(listItem.item,$event)">
+      <input #todo type="text" [(ngModel)]="todoItem" (keyup.enter)="addTodoItem(listItem.item)">
+      <div *ngFor="let todo of listItem.todo; let id=index">
+        <app-todos [todo]="todo" [todoId]="id" (taskUpdated)="taskUpdated($event,listItem.item)"
+          (onDragStart)="onDragStart($event,id,listItem.item)" (deleteTodoItem)="deleteTodoItem($event,listItem.item)">
+        </app-todos>
+      </div>
+    </div>
+  </div>
+</div>

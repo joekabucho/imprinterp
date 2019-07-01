@@ -1,0 +1,9 @@
+<div [ngClass]="classSelector" draggable="true" (dragstart)="onDrag($event);" (click)="changeStatus()">
+  <!-- <a class="waves-effect waves-black btn-floating right close" (click)="deleteTodo()">
+    <i class="material-icons">close</i>
+  </a> -->
+  {{ todo.name }}
+  <button type="button" class="close right" aria-label="Close" (click)="deleteTodo()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>

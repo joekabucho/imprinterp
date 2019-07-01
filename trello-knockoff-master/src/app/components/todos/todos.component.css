@@ -1,0 +1,30 @@
+.todo,
+input {
+  padding: 15px;
+  width: 100%;
+  margin-top: 5px;
+  color: #e2e0e0;
+}
+.finished {
+  color: grey;
+  text-decoration: line-through;
+  font-style: italic;
+}
+.unfinished {
+  color: black;
+}
+.todo {
+  cursor: pointer;
+}
+button {
+  color: black;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px #e2e0e0, 2px 2px 5px #e2e0e0;
+  background-color: white;
+  width: 35px;
+  height: 35px;
+  border: 1px solid grey;
+  position: relative;
+  bottom: 7px;
+  border-radius: 50%;
+}

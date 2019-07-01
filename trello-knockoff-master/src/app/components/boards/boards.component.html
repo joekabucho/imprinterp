@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="card-content">
+    <a class="btn-floating btn-small waves-effect waves-light red right" (click)="deleteBoard()">
+      <i class="material-icons">close</i>
+    </a>
+    <a [routerLink]="['/boards',id]"><span class="card-title">{{ board.name }}</span></a>
+    <div *ngIf="error" class="alert alert-danger alert-dismissable" (click)="error=!error">Cannot delete board! It's not empty!</div>
+  </div>
+</div>

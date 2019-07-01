@@ -1,0 +1,12 @@
+.card-title,#box{
+    cursor: pointer;
+}
+.m4{
+    margin-top: 10px;
+}
+.row,#list{
+    margin-top:20px;
+}
+#box span{
+    margin-left:10px;
+}

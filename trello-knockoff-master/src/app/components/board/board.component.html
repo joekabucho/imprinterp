@@ -1,0 +1,53 @@
+<div class="row">
+  <a routerLink="/">
+    <a class="btn-floating btn-large black"><i class="small material-icons">keyboard_arrow_left</i></a>
+  </a>
+</div>
+<div class="row">
+  <div class="col m6">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title" >{{ board.name }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col m4" *ngFor="let item of board.list">
+    <app-lists [listItem]="item" [id]="id" (deleteItem)="deleteItem($event)"></app-lists>
+  </div>
+  <div class="col m5" id="list">
+    <div *ngIf="add; then input else box"></div>
+    <ng-template #input>
+      <div class="card">
+        <div class="card-content">
+          <a class="btn-floating btn-small waves-effect waves-light red right close" (click)="add=!add">
+            <i class="material-icons">close</i>
+          </a>
+          <span class="card-title">Give me a name</span>
+            <!-- <button type="button" class=" btn waves-effect close" aria-label="Close" (click)="add=!add">
+              <span aria-hidden="true right">&times;</span>
+            </button> -->
+          <div class="row">
+            <div class="input-field col s12">
+              <input #listItem type="text" (keyup.enter)="addItem(listItem.value)">
+            </div>
+          </div>
+        </div>
+        <!-- <div class="card-block">
+          <input #listItem type="text" (keyup.enter)="addItem(listItem.value)">
+        </div> -->
+        <div *ngIf="error" class="error">Duplicate Data!</div>
+      </div>
+    </ng-template>
+    <ng-template #box>
+      <div (click)="addList()" id="box" class="valign-wrapper">
+        <a class="btn-floating btn-small waves-effect waves-light horizontal black left close">
+          <i class="material-icons">add</i>
+        </a>
+        <!-- <i class="small material-icons" aria-hidden="true">add_circle</i> -->
+        <span>Add a list</span>
+      </div>
+    </ng-template>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+.todo,input{
+    border:1px solid #e2e0e0;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px #e2e0e0, 2px 2px 5px #e2e0e0;
+    padding:15px;
+    width:100%;
+    margin-top: 5px;
+}
