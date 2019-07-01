@@ -9,6 +9,9 @@ import { ProjectBoardsComponent } from './projects/project-boards/project-boards
 import { ProjectTasksComponent } from './projects/project-tasks/project-tasks.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import {SidebarModule} from "ng-sidebar";
+import { DevTeamComponent } from './teams/dev-team/dev-team.component';
+import { SocialmediaTeamComponent } from './teams/socialmedia-team/socialmedia-team.component';
+import { BusinessdevelopmentTeamComponent } from './teams/businessdevelopment-team/businessdevelopment-team.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import {SidebarModule} from "ng-sidebar";
     CreateProjectComponent,
     ProjectBoardsComponent,
     ProjectTasksComponent,
-    SidebarComponent
+    SidebarComponent,
+    DevTeamComponent,
+    SocialmediaTeamComponent,
+    BusinessdevelopmentTeamComponent
   ],
   imports: [
     BrowserModule,
